@@ -40,4 +40,14 @@ const server =http.createServer( function(req, res) {
             })
             console.log(method)
 })
-server.listen(port:3000)
+server.listen(3000,function(){
+    console.log("server in connected");
+})
+
+const handler={};
+handler.sample=function(data,callback){
+    callback(200,{'name':'sample handler'});
+}
+handler.notFound-function(data,callback){
+    callback(404);
+}
